@@ -16,7 +16,7 @@ router.post("/upload",async ctx=>{
 
 app
 .use(router.routes())
-app.use(koaBody({ multipart: true }));
+.use(koaBody({ multipart: true }))
 .use(router.allowedMethods())
 
 app.listen(3000,()=> console.log('Server started...'));
